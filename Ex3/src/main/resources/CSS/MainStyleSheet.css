@@ -1,0 +1,9 @@
+.greenButton{
+    -fx-background-color: #33FF33;
+}
+.yellowButton{
+    -fx-background-color: #FFFF33;
+}
+.redButton{
+    -fx-background-color: #FF3333;
+}

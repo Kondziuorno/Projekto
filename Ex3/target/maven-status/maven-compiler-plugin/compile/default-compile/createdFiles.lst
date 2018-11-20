@@ -1,0 +1,15 @@
+com\wszib\SeaBattle\FXFleetCreatorController.class
+com\wszib\SeaBattle\Ship.class
+com\wszib\SeaBattle\GridOperation\FleetBuilderPlayer$1.class
+com\wszib\SeaBattle\GridOperation\FleetBuilderPlayer.class
+com\wszib\SeaBattle\FXApp.class
+com\wszib\SeaBattle\GridOperation\FleetBuilderBase.class
+com\wszib\SeaBattle\GridOperation\GridHandler$Colors.class
+com\wszib\SeaBattle\GridOperation\GridHandler.class
+com\wszib\SeaBattle\Ship$1.class
+com\wszib\SeaBattle\GridOperation\GridHandler$1.class
+com\wszib\SeaBattle\GridOperation\GridHandler$TypeOfPlayers.class
+com\wszib\SeaBattle\GridOperation\FleetBuilderBase$1.class
+com\wszib\SeaBattle\FXSeaBattleController.class
+com\wszib\SeaBattle\FXBaseController.class
+com\wszib\SeaBattle\GridOperation\FleetBuilderBase$ShipType.class

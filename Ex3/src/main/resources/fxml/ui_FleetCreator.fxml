@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="752.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wszib.SeaBattle.FXFleetCreatorController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="New Board" />
+                  <Menu mnemonicParsing="false" text="Save">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#setSaveFileTosav1" text="sav1" />
+                        <MenuItem mnemonicParsing="false" onAction="#setSaveFileTosav2" text="sav2" />
+                        <MenuItem mnemonicParsing="false" onAction="#setSaveFileTosav3" text="sav3" />
+                        <MenuItem mnemonicParsing="false" onAction="#setSaveFileTosav4" text="sav4" />
+                    </items>
+                  </Menu>
+                  <MenuItem fx:id="menuItemClose" mnemonicParsing="false" onAction="#actionEventExit" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <GridPane fx:id="gridPanePlayer" hgap="1.0" vgap="1.0" VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Label text="1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                           <children>
+                              <Label text="2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
+                           <children>
+                              <Label text="3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4">
+                           <children>
+                              <Label text="4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5">
+                           <children>
+                              <Label text="5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
+                           <children>
+                              <Label text="6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
+                           <children>
+                              <Label text="7" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8">
+                           <children>
+                              <Label text="8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9">
+                           <children>
+                              <Label text="9" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="10">
+                           <children>
+                              <Label text="10" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label text="1" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label text="2" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label text="3" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                           <children>
+                              <Label text="4" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                           <children>
+                              <Label text="5" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                           <children>
+                              <Label text="6" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
+                           <children>
+                              <Label text="7" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="8">
+                           <children>
+                              <Label text="8" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="9">
+                           <children>
+                              <Label text="9" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="10">
+                           <children>
+                              <Label text="10" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="10" GridPane.rowIndex="1">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="10" GridPane.rowIndex="2">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="3">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="10" GridPane.rowIndex="3">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="4">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="10" GridPane.rowIndex="4">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="5">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="5">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="10" GridPane.rowIndex="5">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="6">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="6">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="6">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="10" GridPane.rowIndex="6">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="7">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="7">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="7">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="7">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="7">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="7">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="10" GridPane.rowIndex="7">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="8">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="8">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="8">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="8">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="8">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="10" GridPane.rowIndex="8">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="9">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="9">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="9">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="9">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="9">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="9">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="10" GridPane.rowIndex="9">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="10">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="10">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="10">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="10">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="10">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="10">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="10">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="10" GridPane.rowIndex="10">
+                           <children>
+                              <Button mnemonicParsing="false" onKeyPressed="#rotateShip" onMouseClicked="#clickedInCell" onMouseEntered="#enteredCell" onMouseExited="#exitedCell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #66FF66;">
+               <HBox.margin>
+                  <Insets left="5.0" top="30.0" />
+               </HBox.margin>
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="102.0" prefWidth="98.0">
+                     <children>
+                        <Label text="Fleet Status">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#refreshBoard" text="Refresh">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Separator prefWidth="200.0" />
+                        <Button mnemonicParsing="false" onAction="#clearBoard" text="Clear Board" />
+                     </children>
+                  </VBox>
+                  <Separator prefWidth="200.0" />
+                  <VBox fx:id="length4VBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label contentDisplay="BOTTOM" text="Length 4">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Label>
+                        <Button fx:id="create4LengthButton" mnemonicParsing="false" onMouseClicked="#chooseFourCellShipToCreate" text="Create">
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#destroyFourCellShip" text="Destroy">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#destroyAllFourCellShip" text="Destroy All" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Count : " />
+                              <Label fx:id="countLabels4" alignment="CENTER" text="0">
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Separator prefWidth="200.0" />
+                  <VBox fx:id="length3VBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label contentDisplay="BOTTOM" text="Length 3">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Label>
+                        <Button fx:id="create3LengthButton" mnemonicParsing="false" onMouseClicked="#chooseThreeCellShipToCreate" text="Create">
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#destroyThreeCellShip" text="Destroy">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#destroyAllThreeCellShip" text="Destroy All" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Count : " />
+                              <Label fx:id="countLabels3" alignment="CENTER" text="0">
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Separator prefWidth="200.0" />
+                  <VBox fx:id="length2VBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label contentDisplay="BOTTOM" text="Length 2">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Label>
+                        <Button fx:id="create2LengthButton" mnemonicParsing="false" onMouseClicked="#chooseTwoCellShipToCreate" text="Create">
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#destroyTwoCellShip" text="Destroy">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#destroyAllTwoCellShip" text="Destroy All" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Count : " />
+                              <Label fx:id="countLabels2" alignment="CENTER" text="0">
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Separator prefWidth="200.0" />
+                  <VBox fx:id="length1VBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label contentDisplay="BOTTOM" text="Length 1">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Label>
+                        <Button fx:id="create1LengthButton" mnemonicParsing="false" onMouseClicked="#chooseOneCellShipToCreate" text="Create">
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#destroyOneCellShip" text="Destroy">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#destroyAllOneCellShip" text="Destroy All" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Count : " />
+                              <Label fx:id="countLabels1" alignment="CENTER" text="0">
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
